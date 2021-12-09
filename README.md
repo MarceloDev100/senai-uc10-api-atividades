@@ -1,7 +1,5 @@
-
-## SENAI-SP - UC9(SA3) - Atividades dos encontros remotos 1 e 2
-
-Consiste na adaptação do site *Game Mania* para o **Framework Angular**. As páginas e alguns trechos de marcação HTML, como headers (cabeçalhos) e footers (rodapés) do site foram separados em componentes para melhor reuso. 
+## SENAI-SP - UC10 - Atividades
+Consiste na comunicação da API (Json Server Auth) e os componentes do Angular para login e cadastro de usuários, através de um CRUD completo.
 
 ## GameMania - Angular
 
