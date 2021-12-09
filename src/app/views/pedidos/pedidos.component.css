@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inder';
+}
+
+.orders-page{
+    background-color:  #EFF4FB; 
+    padding: 20px;
+}
+
+.center{
+    max-width: 1700px;
+    margin: 0 auto;  
+}
+
+.align-horizontal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orders{
+    margin-top: 60px;
+    width: 100%;
+}
+
+.box-orders{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.title{
+    margin-bottom: 60px;
+}
+
+.form-row{
+    width: 900px;
+}
+
+.form-control{
+    height: 40px;
+    padding: 10px;
+}
+
+.input-group-prepend button span {
+   width: 40px;
+   height: 36px;
+   padding: 10px;
+
+}
+
+.accordion{
+    max-width: 900px;
+    margin-bottom: 100px;
+}
+
+.accordion-item{
+    margin-bottom: 30px;
+    width: 900px;
+}
+
+.product{
+    display: flex;
+}
+
+.product img{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.product .condition{
+    display: flex;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.product .condition span strong{
+    color: #000080;
+}
+
+.details{
+  padding: 15px;
+}
+
+.action-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-buttons a{
+    margin: 0px 20px;
+}
+
+/* TIMELINE */
+.timeline{
+    width: 100%;
+    height: 20px;
+    padding-right: 10px;
+    list-style: none;
+    text-align: justify;
+    margin: 80px auto;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0% , rgba(255, 255, 255, 0) 45%, rgba(191, 128, 11, 1) 51%,
+    rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0) 100%) ;
+}
+
+.timeline::after{
+    display: inline-block;
+    content: '';
+    width: 100%;
+}
+
+.timeline li{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #F2BB13;
+    text-align: center;
+    line-height: 1.2;
+    position: relative;
+    border-radius: 50%;
+    margin: 0px 4em;
+
+}
+
+.timeline li::before{
+    display: inline-block;
+    content: attr(data-time);
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline li:nth-child(odd)::before{
+    top: -70px;
+}
+
+.timeline li:nth-child(even)::before{
+    top: -70px;
+}
+
+.timeline li::after{
+    display: inline-block;
+    content: attr(data-text);
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline li:nth-child(odd)::after{
+    bottom: 0;
+    margin-bottom: -10px;
+    transform: translate(-50%, 100%);
+}
+
+.timeline li:nth-child(even)::after{
+    top: 80px;
+    margin-top: -10px;
+    transform: translate(-50%, -100%);
+}
+
+.action-buttons a{
+    background-color: #477DCD;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+ }
+ 
+ .options a{
+     text-decoration: none;
+     background-color: #000080;
+     color: #FFFFFF;
+     padding: 12px;
+     border-radius: 10px;
+     margin: 0px 5px;
+     font-size: 18px;
+ }
+
+ .options a:hover{
+     background-color: #477DCD;
+ }
+
+ .options a i{
+     margin: 0px 5px;
+ }
+ 
+
+/* ***************   MEDIA QUERIES  ********************* */
+
+@media screen and (max-width: 1700px){
+   .orders , .center{
+       width: 88.54%;
+   }
+ }
+
+@media screen and (max-width: 1550px){
+   .form-row{
+       width: 800px;
+   }
+
+   .accordion{
+       margin-bottom: 50px;
+   }
+
+   .accordion-item{
+       width: 800px;
+   }
+}
+
+@media screen and (max-width: 1200px){
+  
+    .form-row{
+        width: 700px;
+    }
+
+    .accordion-item{
+        width: 700px;
+    }
+
+    .timeline li{
+        margin: 0px 50px;
+    }
+
+    .timeline li::before, .timeline li::after{
+       font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+   
+    .form-row{
+        width: 600px;
+    }
+
+    .accordion-item{
+        width: 600px;
+    }
+
+    .timeline li{
+        margin: 0px 40px;
+    }
+
+    .timeline li::before, .timeline li::after{
+       font-size: 12px;
+    }
+ }
+
+
+ @media screen and (max-width: 768px){
+   
+    .form-row{
+        width: 450px;
+    }
+
+    .accordion{
+        margin-bottom: 20px;
+    }
+
+    .accordion-item{
+        width: 450px;
+    }
+
+    .action-buttons{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .action-buttons a{
+        margin: 3px 0px;
+        text-align: center;
+    }
+
+    .timeline li{
+        margin: 0px 30px;
+    }
+
+    .timeline li::before, .timeline li::after{
+       font-size: 10px;
+    }
+
+
+    .options a{
+        font-size: 16px;
+    }
+
+ }
+
+ 
+ @media screen and (max-width: 520px){
+
+    .form-row{
+        width: 350px;
+    }
+
+    .accordion-item{
+        width: 350px;
+    }
+
+    .timeline{
+        display: none;
+    }
+ }
+
+ @media screen and (max-width: 400px){
+
+    .access-area a {
+        margin: 0px 5px;
+     }
+  
+    .form-row{
+        width: 250px;
+    }
+
+    .accordion-item{
+        width: 250px;
+    }
+
+    .condition{
+        font-size: 13px;
+    }
+
+    .options a{
+        font-size: 14px;
+    }
+
+    .condition{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .condition span{
+        margin: 5px 0px;
+    }
+ }

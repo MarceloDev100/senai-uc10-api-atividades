@@ -1,0 +1,16 @@
+main {
+  margin-top: 50px;
+  height: 100%;
+}
+
+.erro{
+  font-size: 40px;
+}
+
+main div{
+ margin: 0 auto;
+}
+
+main iframe{
+  margin-bottom: 50px;
+}

@@ -1,0 +1,45 @@
+<section class="category-page">
+    <div class="category">
+        <div class="center">
+            <h2 class="title">
+                <span>
+                    <i class="fas fa-layer-group"></i>
+                </span>
+                Categorias
+            </h2>
+
+            <div class="category-search-box">
+                <form action="">
+                    <input type="search" placeholder="Buscar categoria">
+                    <button type="button">Buscar</button>
+                </form>
+            </div>
+
+            <section class="items">
+                <div class="left-menu-container">
+                    <div class="left-menu">
+                        <a [routerLink]="item.link" *ngFor="let item of items">
+                            <div class="box-item-menu">
+                                <span>
+                                    <i [class]="item.iconClass"></i>
+                                </span>
+                                <span>{{ item.name }}</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="categories">
+                    <div class="item" *ngFor="let category of categories">
+                        <a href="#"><img [src]="category.image" [alt]="category.alt"></a>
+                        <span>{{ category.name }}</span>
+                    </div>
+                </div>
+            </section>
+            <div class="options center">
+                <a routerLink=""><i class="fas fa-home"></i>Home</a>
+                <a (click)="toUp()"><i class="fas fa-arrow-up"></i>Ir para o topo</a>
+            </div>
+        </div>
+    </div>
+</section>

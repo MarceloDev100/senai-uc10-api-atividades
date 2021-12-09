@@ -1,0 +1,65 @@
+<section class="form-page">
+  <h2>Cadastro do usuário</h2>
+    <form #cadastroForm="ngForm">
+      <div class="form-row">
+            <div id="message-success" *ngIf="message != ''" class="alert alert-primary" role="alert">{{ message }}</div>
+            <div class="form-group col-md-12">
+                <mat-form-field >
+                    <label for="">CPF</label>
+                    <input type="text" matInput  [(ngModel)]="cadastro.ssn" name="cpf" id="cpf" required>
+                </mat-form-field>
+            </div>
+
+            <div class="form-group">
+                <mat-form-field >
+                    <label for="">Nome completo</label>
+                    <input type="text" matInput [(ngModel)]="cadastro.name" name="nome" required >
+                </mat-form-field>
+            </div>
+
+            <div class="form-group">
+                <mat-form-field>
+                    <label for="">Endereço</label>
+                    <input type="text" matInput  [(ngModel)]="cadastro.address" name="endereco">
+                </mat-form-field>
+            </div>
+
+            <div class="form-group">
+                <mat-form-field>
+                    <label for="">E-mail</label>
+                    <input type="email" matInput  [(ngModel)]="cadastro.email" name="email" required>
+                </mat-form-field>
+            </div>
+
+            <div class="form-group">
+                <mat-form-field>
+                    <label for="">Celular</label>
+                    <input type="tel" matInput [(ngModel)]="cadastro.mobile" name="cel">
+                </mat-form-field>
+            </div>
+
+            <div class="form-group">
+                <mat-form-field>
+                    <label for="">Senha</label>
+                    <input type="password" matInput [(ngModel)]="cadastro.password" name="senha" required>
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                <div class="d-flex justify-content-center box" style="margin: 0 auto;">
+                    <hr class="mb-4">
+                    <div>
+                         <button type="submit" class="btn btn-cadastrar" (click)="createCadastro()" [disabled]="cadastroForm.form.invalid"  mat-flat-button color="warn">Cadastrar</button>
+                    </div>
+                    <div >
+                        <button class="btn btn-cancelar" (click)="cancelarCadastro()" mat-flat-button color="warn" >Cancelar</button>
+                    </div>
+                    <div>
+                       <button  class="btn btn-login" (click)="login()"  mat-raised-button  >Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </form>
+</section>
+

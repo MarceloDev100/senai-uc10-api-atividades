@@ -1,0 +1,54 @@
+<div class="container">
+    <form>
+        <h2>Encerrar conta</h2>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <mat-form-field>
+                    <label for="">Nome</label>
+                    <input type="text" matInput name="nome" [(ngModel)]="cadastro.name" disabled>
+                </mat-form-field>
+            </div>
+
+                <div class="form-group">
+                    <mat-form-field>
+                        <label for="">Endereço</label>
+                        <input type="text"  matInput name="endereco" [(ngModel)]="cadastro.address" disabled>
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                    <mat-form-field>
+                        <label for="">Email</label>
+                        <input type="text"   matInput name="email" [(ngModel)]="cadastro.email" disabled>
+                    </mat-form-field>
+                 </div>
+
+                <div class="form-group">
+                    <mat-form-field>
+                        <label for="">Celular</label>
+                        <input type="text"  matInput name="cel" [(ngModel)]="cadastro.mobile" disabled>
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group">
+                    <mat-form-field>
+                        <label for="">Senha</label>
+                        <input type="password"  matInput name="senha" [(ngModel)]="cadastro.password" disabled>
+                    </mat-form-field>
+                </div>
+
+                <div class="row">
+                    <div class="d-flex justify-content-center box" style="margin: 0 auto;">
+                        <hr class="mb-4">
+                        <div>
+                             <button class="btn btn-cadastrar" (click)="deleteCadastro()" mat-flat-button color="warn">Encerrar conta</button>
+                        </div>
+                        <div >
+                            <button class="btn btn-cancelar" (click)="cancelarCadastro()" mat-flat-button color="warn">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </form>
+</div>
+

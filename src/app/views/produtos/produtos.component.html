@@ -1,0 +1,55 @@
+<section class="products-page">
+    <div class="banner">
+        <div class="banner-area" id="banner-area">
+            <marquee id="banner-text" direction="right" class="banner-text">Melhores ofertas com super desconto, tudo em 12 x sem juros no cartão. Comece a pagar no segundo mês! Aproveite!!</marquee>
+        </div>
+    </div>
+
+    <div class="search-box">
+       <h1><span><i class="fas fa-box"></i></span>Produtos</h1>
+       <form action="#">
+           <input type="search" placeholder="O que você procura?">
+           <button type="button">Buscar</button>
+       </form>
+    </div>
+
+    <div class="products-section">
+           <div class="left-menu">
+               <div *ngFor="let item of items">
+                   <a href="">{{ item }}</a>
+               </div>
+           </div>
+
+       <div class="products-box center">
+           <a href="" *ngFor="let card of cards">
+               <div class="card">
+                   <div class="image-box"><img [src]="card.image" [alt]="card.alt"></div>
+                   <div class="details">
+                       <p class="title">{{ card.title }}</p>
+                       <p class="price-before">{{ card.priceBefore }}</p>
+                       <p class="price-now">{{ card.priceNow }}</p>
+                   </div>
+               </div>
+           </a>
+       </div>
+    </div>
+
+    <div class="pagination-section">
+       <div class="pagination center ">
+           <ul class="pagination-numbers">
+               <li><button class="previous-page"><i class="fas fa-chevron-left"></i></button></li>
+               <li><button>1</button></li>
+               <li><button>2</button></li>
+               <li><button>3</button></li>
+               <li><button>4</button></li>
+               <li><button>5</button></li>
+               <li><button class="next-page"><i class="fas fa-chevron-right"></i></button></li>
+           </ul>
+           <div class="options">
+               <a routerLink=""><i class="fas fa-home"></i>Home</a>
+               <a (click)="toUp()"><i class="fas fa-arrow-up"></i>Ir ao topo</a>
+           </div>
+       </div>
+    </div>
+</section>
+

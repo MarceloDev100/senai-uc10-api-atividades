@@ -1,0 +1,64 @@
+<header>
+    <div class="center header-position">
+        <div class="logo" id="logo" data-toggle="tooltip" data-placement="right" title="Login">
+            <a routerLink=""><img src="assets/img/logo.png" alt="Logo do site Game Mania"></a>
+        </div>
+        <div class="access-box">
+            <div class="menu-bar" id="menu-bar" onclick="//onShowMenu()">
+                <div>
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="login-box">
+                <button type="button"><img src="assets/img/login-icon.png" class="login-icon" alt="ícone de login" (click)="status()"></button>
+                <div class="login-details" [hidden]="!escondido" *ngIf="active; else elseBlock">
+                    <p>Olá , {{ username }} !</p>
+                    <p><a routerLink="" (click)="logout()">LOGOUT</a></p>
+                    <p><a routerLink="cadastroStart" (click)="loginClick()" >Meu cadastro</a></p>
+                </div>
+
+                <ng-template #elseBlock>
+                  <div class="login-register" [hidden]="escondido">
+                      <p>Não tem cadastro?</p>
+                      <p><a routerLink="cadastro" (click)="registerClick()">Cadastre-se</a></p>
+                      <p><a routerLink="login" (click)="loginClick()">Login</a></p>
+                  </div>
+                </ng-template>
+
+                <a routerLink="/carrinho"><img src="assets/img/cart-icon.png" class="cart-icon" alt="ícone de carrinho">
+                <span class="cart-items">1</span></a>
+            </div>
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Busque seu produto">
+                <a href="" class="search-icon"><img src="assets/img/search-icon.png" alt="ícone de pesquisa"></a>
+            </div>
+            <nav class="menu" id="menu">
+                <div class="close-menu" id="close-menu" onclick="//onCloseMenu()">
+                    <i class="fas fa-times"></i>
+                    <span *ngIf="active" class="greetings">Olá, {{ username }} !</span>
+                </div>
+
+                <a routerLink="" class="close">Início</a>
+                <a routerLink="" class="close">Notebooks</a>
+                <a routerLink="" class="close">Tablets</a>
+                <a routerLink="" class="close">Pc Gamers</a>
+                <a routerLink="" class="close">Jogos</a>
+                <a routerLink="" class="close">Smartphones</a>
+                <a routerLink="pedidos" class="close">Meus pedidos</a>
+                <div class="access-links" id="access-links">
+                    <a routerLink="login" *ngIf="!active" class="login close">Login</a>
+                    <a routerLink="" *ngIf="active" (click)="logout()">Logout</a>
+                    <a routerLink="cadastroStart" class="close">Cadastre-se</a>
+                    <a routerLink="carrinho" class="close">Carrinho</a>
+                    <form class="search-form">
+                        <label for="search">Pesquisar</label>
+                        <div class="menu-input">
+                            <input type="text" id="search">
+                            <a href="#" class="close"><img src="assets/img/search-icon.png" alt="icone pesquisa menu barra"></a>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>

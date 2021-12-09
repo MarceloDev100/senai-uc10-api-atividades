@@ -1,0 +1,81 @@
+<section class="myorders-page">
+    <div class="myorders">
+        <div id="myorders"></div>
+        <div class="box-cart center">
+            <div class="product">
+                <h2 class="title">
+                    <span class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                    <span>Meu carrinho</span>
+                </h2>
+                <table class="table">
+                    <thead class="table-title">
+                        <tr>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Qtd</th>
+                            <th scope="col">Entrega</th>
+                            <th scope="col">Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="product-col">
+                                <img src="assets/img/joystick-image.png" alt="">
+                                <span>Controle Razer Raion Fightpad, para PS4 e PC, Razer Switch Yellow - RZ06-02940100-R3G1</span>
+                            </td>
+                            <td>
+                                <div class="qtd-box">
+                                    <button class="minus-button">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <input type="tel" maxlength="2" min="0" max="20" value="1" class="qtd-field" readonly>
+                                    <button class="plus-button">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="deadline">Receba até 30 de novembro</div>
+                            </td>
+                            <td>
+                                <div class="total-price">R$ 359,99</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="order-resume">
+                <h2>Resumo do pedido</h2>
+                <ul class="order-details">
+                    <li>
+                        <label for=""><span class="qtd">1</span> <span class="product-label">Produto</span></label>
+                        <span class="total-price">R$ 359,99</span>
+                    </li>
+                    <li>
+                        <label for="">Frete</label>
+                        <span>R$ 0,00</span>
+                    </li>
+    
+                    <li>
+                        <h4 style="display: inline-block;">Total</h4>
+                        <span>
+                            <strong class="total-price">R$ 359,99</strong>
+                        </span>
+                    </li>
+                </ul>
+                <div class="forward-button">
+                    <button>Continuar</button>
+                </div>
+                <p class="add-more">
+                    <a href="#">Adicionar mais produtos</a>
+                </p>
+            </div>
+        </div>
+    
+        <div class="options center">
+            <a routerLink=""><i class="fas fa-home"></i>Home</a>
+            <a routerLink="#logo" (click)= "toUp()"><i class="fas fa-arrow-up"></i>Ir ao topo</a>
+        </div>
+    </div>
+</section>

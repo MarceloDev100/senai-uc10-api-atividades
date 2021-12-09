@@ -1,0 +1,4 @@
+<app-cadastro-create *ngIf="!active; else elseBlock"></app-cadastro-create>
+<ng-template #elseBlock>
+  <app-cadastro-read></app-cadastro-read>
+</ng-template>

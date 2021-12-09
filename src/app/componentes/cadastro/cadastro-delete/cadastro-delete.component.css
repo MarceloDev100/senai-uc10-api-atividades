@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+}
+
+.form-page{
+    max-width: 1920px;
+}
+
+
+form{
+    margin: 100px auto;
+    width: 500px;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: column;
+}
+
+mat-form-field{
+    width: 500px;
+}
+
+mat-form-field input{
+    margin-top: 10px;
+}
+
+.box{
+    display: flex;
+}
+
+.row div button, .row div a{
+    margin-right: 10px;
+    padding: 0px 10px;
+}
+
+
+@media screen and (max-width: 1200px){
+
+    form{
+       width: 300px;
+    }
+
+    .form-row{
+        align-items: flex-start;
+        width: 300px;
+    }
+
+    .row{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 300px;
+    }
+
+    .box, mat-form-field{
+        width: 300px;
+    }
+
+    .box{
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0px 0px;
+    }
+
+    .row div button, .row div a{
+        margin-top: 10px;
+        width: 300px;
+
+    }
+
+}
+
+@media screen and (max-width: 767px){
+
+    mat-form-field{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+    form{
+        width: 280px;
+        margin-top: 50px;
+     }
+
+     .form-row{
+         align-items: flex-start;
+         width: 280px;
+     }
+
+     .row{
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       width: 280px;
+     }
+
+     .box, mat-form-field{
+         width: 280px;
+     }
+
+     .box{
+         flex-direction: column;
+         align-items: flex-start;
+         margin: 0px 0px;
+     }
+
+     .row div button{
+         margin-top: 10px;
+         width: 280px;
+     }
+}

@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inder';
+    font-size: 25px;
+}
+
+
+.login-page{
+    background-color:  #EFF4FB;
+    padding: 20px;
+}
+
+.center{
+    margin: 0 auto;
+    width: 88.54%;
+}
+
+.grid-position{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    width: 500px;
+}
+
+.login-area h1{
+    text-align: center;
+    font-weight: bold;
+    margin: 40px 0px;
+}
+
+.login-area h1 span{
+    font-size: 30px;
+}
+
+.login-area h1 i{
+    font-size: 30px;
+    margin: 0px 10px;
+}
+
+.login-area form{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.login-area form div{
+    margin: 20px 0;
+}
+
+.login-area form div input{
+    width: 500px;
+}
+
+.login-area form .data-email{
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.login-area form .data-password{
+  display: flex;
+  flex-direction: column;
+}
+
+.login-area form .data-email .alert, .login-area form .data-password .alert {
+  padding: 10px;
+}
+
+.login-area .data-send{
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.login-area .data-message #message-error{
+   background-color: red;
+   color: #FFFFFF;
+   padding: 10px;
+}
+
+.login-area .data-message #message-success{
+   background-color: cornflowerblue;
+   color: #FFFFFF;
+   padding: 10px;
+}
+
+.login-area form .data-message span{
+  padding: 10px;
+}
+
+.login-area .data-send button{
+    padding: 5px;
+    background-color: #000080;
+    color: #FFFFFF;
+    width: 500px;
+}
+
+.login-area .data-send button:hover{
+    background-color: #477DCD;
+}
+
+input{
+  padding: 10px;
+}
+
+.login-area .register-link{
+    text-align: center;
+}
+
+.login-area .register-link span, .login-area .register-link a, .login-area .policy, .login-area .policy a{
+    font-size: 18px;
+    text-align: center;
+}
+
+.back{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+ }
+
+ .back a{
+     text-decoration: none;
+     background-color: #000080;
+     color: #FFFFFF;
+     padding: 12px;
+     border-radius: 10px;
+     margin: 0px 5px;
+     font-size: 18px;
+ }
+
+ .back a:hover{
+    background-color: #477DCD;
+ }
+
+ .back i {
+     margin: 0px 5px;
+ }
+
+ /* validations */
+ .ng-invalid.ng-touched:not(form){
+   border: 1px solid red;
+ }
+
+ /* ***************   MEDIA QUERIES  ********************* */
+
+@media screen and (max-width: 780px){
+
+    .login-area label{
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (max-width: 540px) {
+
+    .login-area {
+        width: 300px;
+    }
+
+    .login-area h1{
+        margin: 20px 0px;
+    }
+
+    .login-area h1 span{
+      font-size: 18px;
+    }
+
+    .login-area form{
+       width: 300px;
+    }
+
+    .login-area  form .data-email input,
+    .login-area  form .data-password input {
+       width: 300px;
+    }
+
+    .login-area .policy{
+        font-size: 16px;
+    }
+
+    input[placeholder]{
+       font-size: 16px;
+    }
+
+
+    .login-area .data-send button{
+        font-size: 16px;
+        width: 300px;
+    }
+
+    .data-message span, .data-email div, .data-password div{
+      font-size: 14px;
+    }
+
+    .login-area .register-link span, .login-area .register-link a{
+        font-size: 16px;
+    }
+
+    .login-area .policy,  .login-area .policy a {
+        font-size: 16px;
+    }
+
+    .back a{
+        font-size: 16px;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+
+   .access-area span{
+      margin: 0px 5px;
+    }
+
+    .login-area {
+        width: 250px;
+    }
+
+    .login-area form{
+      width: 250px;
+   }
+
+    .login-area form .data-email input,
+    .login-area form .data-password input,
+    .login-area .policy{
+      font-size: 14px;
+      width: 250px;
+    }
+
+    .login-area .data-send button{
+        font-size: 14px;
+        width: 250px;
+    }
+
+    .login-area .data-message #message{
+       font-size: 14px;
+    }
+
+    .login-area .register-link span, .login-area .register-link a{
+        font-size: 14px;
+    }
+
+    .login-area .policy,  .login-area .policy a {
+        font-size: 14px;
+    }
+
+    .back a{
+        font-size: 12px;
+    }
+
+    .back i {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+

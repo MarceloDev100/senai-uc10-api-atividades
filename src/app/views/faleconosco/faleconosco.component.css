@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inder';
+    font-size: 25px;
+}
+
+
+.contact-us-page{
+    background-color:  #EFF4FB;
+    padding: 20px;
+}
+
+.center{
+    margin: 0 auto;
+    width: 88.54%;
+}
+
+.grid-position{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-us{
+    margin: 3% auto;
+    width: 500px;
+}
+
+.contact-us h1 {
+    margin-bottom: 25px;
+    font-size: 1.5em;
+}
+
+.contact-us form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us form label, .contact-us form input, .contact-us form button{
+    font-size: 18px;
+}
+
+.contact-us form input, .contact-us form textarea{
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.contact-us form label{
+    margin-bottom: 5px;
+    width: 150px;
+}
+
+.contact-us form button{
+    padding: 10px;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #000080;
+    border-radius: 10px;
+    border: 0;
+}
+
+.contact-us form textarea{
+    font-size: 18px;
+}
+
+.contact-us form button:hover{
+   background-color: #477DCD;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+}
+
+.options a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #000080;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.options a:hover{
+    background-color: #477DCD;
+}
+
+.options a i , .options button i {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 0px 5px;
+}
+
+.options button{
+    margin:  0px 10px;
+}
+
+
+
+/* ***************   MEDIA QUERIES  ********************* */
+
+@media  only screen and (max-width: 768px) {
+     
+    .contact-us{
+        margin: 20px;
+    }
+  
+    .contact-us h1{
+         font-size: 25px;
+         width: 250px;
+    
+     }
+}
+
+@media  only screen and (max-width: 560px){
+    
+    .contact-us{
+        width: 300px;
+    }
+    
+    .contact-us h1{
+        font-size: 20px;
+        width: 250px;
+   
+    }
+
+    .contact-us form label, .contact-us form input{
+        font-size: 16px;
+    }
+
+    .contact-us form input, .contact-us form textarea{
+        width: 300px;
+    }
+
+    .contact-us .options a, .contact-us .options button {
+       font-size: 14px;
+    }
+}
+
+@media  only screen and (max-width: 340px){
+    .contact-us{
+        width: 250px;
+    }
+    
+    .contact-us h1{
+        font-size: 16px;
+        width: 250px;
+        font-weight: 900;
+   
+    }
+
+    .contact-us form label, .contact-us form input{
+        font-size: 16px;
+    }
+
+    .contact-us form input, .contact-us form textarea{
+        width: 250px;
+    }
+}

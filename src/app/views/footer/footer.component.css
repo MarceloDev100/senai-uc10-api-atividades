@@ -1,0 +1,132 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+
+/* ***************   RESET  ********************* */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inder', sans-serif;
+}
+
+
+/* ***************   POSITION  ********************* */
+
+.center{
+   width: 88.54%;
+   margin: 0 auto;
+}
+
+/* ***************   FOOTER  ********************* */
+footer{
+    background-color: #161515;
+    height: 342px;
+    padding: 20px;
+    color: #FFFFFF;
+}
+
+footer  a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color : #477DCD;
+    transition: 0.3s;
+}
+
+footer .credit-cards .row span, footer .social-media .row span{
+    font-size: 18px;
+    margin: 10px 0px;
+}
+
+footer .credit-cards .col-1{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+
+}
+
+footer .credit-card-box, .social-media-box{
+    margin: 0px 10px;
+}
+
+footer .col-4 p{
+    font-size: 18px;
+    margin: 10px 0px;
+}
+
+footer .rights{
+     text-align: center;
+     font-size: 16px;
+     margin: 0;
+}
+
+/* ***************   MEDIA QUERIES  ********************* */
+
+
+ @media only screen and (max-width: 1100px){
+ 
+     footer {
+         padding: 5px;
+         height: 100%;
+     }
+ 
+     footer .col-4 p{
+         font-size: 14px;
+     }
+ 
+     footer .credit-cards .row span,   footer .social-media .row span{
+         font-size: 14px;
+     }
+ 
+     footer .rights{
+         font-size: 14px;
+     }
+ 
+ }
+ 
+
+ @media only screen and (max-width: 780px){
+ 
+     .social-media .row .col-1 a img{
+         width: 30px;
+         height: 30px;
+     }
+ 
+     footer .row .col-4 p, footer .credit-cards .row span, footer .social-media .row span{
+        font-size: 12px;
+     }
+ 
+ 
+     .credit-cards .row, .social-media .row{
+         display: flex;
+         justify-content: center;
+     }
+ 
+     .credit-cards .row .col-1{
+         flex: 1 1 30%;
+     }
+  
+     .social-media .row .col-1{
+          flex: 1 1 30%;
+     }
+ 
+     footer .rights{
+         text-align: center;
+         font-size: 12px;
+         margin: 0;
+    }
+   
+ }
+ 
+
+ @media only screen and (max-width: 319px){
+     .credit-cards .col-1 {
+         margin: 5px;
+         padding: 6px;
+     }
+ }
+

@@ -1,0 +1,21 @@
+<section class="contact-us-page">
+    <div class="contact-us">
+        <h1>Fale conosco</h1>
+        <form #contactUsForm="ngForm" (ngSubmit)="onSubmit()">
+            <label for="name">Nome completo</label>
+            <input type="text" placeholder="Insira seu nome" name="name" id="name" [(ngModel)]="contactUs.name">
+            <label for="tel">Telefone fixo</label>
+            <input type="tel" placeholder="(00)0000-0000" name="tel" id="tel" onkeypress="phoneMask(this, phone);" onblur="mask(this, phone);" [(ngModel)]="contactUs.phone">
+            <label for="mobile">Celular</label>
+            <input type="tel" placeholder="(00)00000-0000" name="mobile" id="mobile" onkeypress="mobileMask(this, mobile);" onblur="mobileMask(this, mobile);" [(ngModel)]="contactUs.mobile">
+            <label for="email">E-mail</label>
+            <input type="email" placeholder="Insira o seu e-mail" name="email" id="email" [(ngModel)]="contactUs.email">
+            <label for="message">Mensagem</label>
+            <textarea name="message" id="" cols="30" rows="5" id="message" [(ngModel)]="contactUs.message"></textarea>
+            <div class="options">
+                <a routerLink=""><i class="fas fa-home"></i>Home</a>
+                <button type="submit" class="send"><i class="fas fa-share"></i>Enviar</button>
+            </div>
+        </form>
+    </div>
+</section>

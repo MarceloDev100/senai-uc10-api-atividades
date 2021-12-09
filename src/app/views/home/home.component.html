@@ -1,0 +1,110 @@
+
+<carousel [isAnimated]="true">
+    <slide>
+      <img src="assets/img/foto1.jfif" alt="first slide" style="display: block; width: 100%;">
+    </slide>
+    <slide>
+      <img src="assets/img/foto2.jpg" alt="second slide" style="display: block; width: 100%;">
+    </slide>
+    <slide>
+      <img src="assets/img/foto3.jpg" alt="third slide" style="display: block; width: 100%;">
+    </slide>
+</carousel>
+
+<section class="brands-section">
+    <div class="brands-box center">
+        <img *ngFor="let brand of brands" [src]="brand.image" [alt]="brand.alt">
+    </div>
+</section>
+
+<section class="categories-section">
+    <div class="strip-box">
+        <span>Escolha uma categoria</span>
+    </div>
+    <div class="categories-box">
+        <div class="categories center">
+            <a href="#" *ngFor="let category of categories">
+                <div class="image-box">
+                    <img [src]="category.image" [alt]="category.alt">
+                    <p>{{ category.name }}</p>
+                </div>
+            </a>
+        </div>
+        <div class="more-categories-box center">
+            <a routerLink="categorias" (click)="toUp()">Mais categorias</a>
+        </div>
+    </div>
+</section>
+
+<section class="features-products-section">
+    <div class="strip-box">
+        <span>Destaques</span>
+    </div>
+    <div class="products-box">
+        <div class="products center" id="products">
+            <a href="#" *ngFor="let card of cards">
+                <div class="card">
+                    <div class="offer" id="box">
+                        <span>{{ card.ad }}</span>
+                    </div>
+                    <div class="image-box"><img [src]="card.image" alt="imagem playstation"></div>
+                    <div class="details">
+                        <p class="title">{{ card.title }}</p>
+                        <p class="price-before">{{ card.priceBefore }}</p>
+                        <p class="price-now">{{ card.priceNow }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="more-products-box center">
+            <a routerLink="produtos">Mais produtos</a>
+        </div>
+
+        <div class="stamps-box">
+                 <div class="stamps">
+                     <div class="stamp"  *ngFor="let stamp of stamps"><img [src]="stamp.image" [alt]="stamp.alt"></div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<section class="visit-section">
+      <div class="strip-box">
+          <span>Faça-nos uma visita !</span>
+      </div>
+      <div class="contact-box center">
+              <div class="tel-box">
+                  <a href="tel:+55210000-0000"><img src="assets/img/phone-icon.png" alt="ícone telefone"><span>Telefone: (21)0000-0000</span></a>  
+              </div>
+              <div class="address-box">
+                  <img src="assets/img/location-icon.png" alt="ícone localização">
+                  <span>Av. Presidente Vargas, s/n - RJ</span>
+              </div>
+              <div class="email-box">
+                  <a href="mailto:contato@gamemania.com"><img src="assets/img/email-icon.png" alt="ícone e-mail"><span>Email: contato@gamemania.com</span></a>
+              </div>
+              <div class="user-contact">
+                  <a routerLink="faleconosco">Fale conosco</a>
+              </div>
+      </div>
+      <div class="map-newsletter-box center">
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.2495790331163!2d-43.18951658441857!3d-22.904163543536946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f6b9ebdff0d%3A0xfddce16d156a199e!2sAv.%20Pres.%20Vargas%20-%20Centro%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1635694260490!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="newsletter-box">
+              <div class="news-title-box">
+                  <img src="assets/img/newsletter-icon.png" alt="ícone newsletter">
+                  <span>Receba nossas novidades e tenha descontos especiais!</span>
+              </div>
+              <div class="news-email-box">
+                  <form #newsletterForm="ngForm" (ngSubmit)="onSubmit()">
+                      <div class="email-label"><label for="news-email">Email*</label></div>
+                      <input type="email" id="news-email" name="email" [(ngModel)]="newsletter.email" >
+                      <button type="submit">Enviar</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+</section>
+
+
